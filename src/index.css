@@ -1,0 +1,112 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: 'Zen Kaku Gothic New', 'Inter', sans-serif;
+  --font-serif: 'Shippori Mincho', serif;
+
+  --color-ink-950: #08090b;
+  --color-ink-900: #0d0f12;
+  --color-ink-850: #121417;
+  --color-ink-800: #181b1f;
+  --color-ink-700: #22262b;
+  --color-ink-600: #2f343a;
+  --color-ink-500: #454b52;
+  --color-ink-400: #6b7280;
+  --color-ink-300: #9aa1a9;
+  --color-ink-200: #c6cbd1;
+  --color-ink-100: #e9ebed;
+  --color-ink-50: #f5f6f7;
+
+  --color-vermillion-50: #fbeeea;
+  --color-vermillion-100: #f4d3c8;
+  --color-vermillion-300: #dd9782;
+  --color-vermillion-400: #cd7a5f;
+  --color-vermillion-500: #c1573f;
+  --color-vermillion-600: #a8452f;
+  --color-vermillion-700: #853526;
+  --color-vermillion: #c1573f;
+
+  --color-matcha-400: #9aab8c;
+  --color-matcha-500: #7c8f6e;
+  --color-matcha-600: #5f7053;
+  --color-matcha: #7c8f6e;
+
+  --color-gold-400: #d9bd85;
+  --color-gold-500: #c9a35f;
+  --color-gold-600: #a8813e;
+  --color-gold: #c9a35f;
+
+  --radius-xl2: 1.25rem;
+
+  --shadow-soft: 0 8px 30px -12px rgba(0,0,0,0.5);
+  --shadow-glow: 0 0 0 1px rgba(201,163,95,0.15), 0 8px 24px -8px rgba(201,163,95,0.25);
+
+  --animate-fadeUp: fadeUp 0.45s cubic-bezier(0.16,1,0.3,1) both;
+  --animate-fadeIn: fadeIn 0.35s ease both;
+  --animate-scaleIn: scaleIn 0.3s cubic-bezier(0.16,1,0.3,1) both;
+  --animate-slideUp: slideUp 0.35s cubic-bezier(0.16,1,0.3,1) both;
+
+  @keyframes fadeUp {
+    0% { opacity: 0; transform: translateY(12px); }
+    100% { opacity: 1; transform: translateY(0); }
+  }
+  @keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+  @keyframes scaleIn {
+    0% { opacity: 0; transform: scale(0.96); }
+    100% { opacity: 1; transform: scale(1); }
+  }
+  @keyframes slideUp {
+    0% { transform: translateY(100%); }
+    100% { transform: translateY(0); }
+  }
+  @keyframes xpFloat {
+    0% { opacity: 0; transform: translateY(4px) scale(0.9); }
+    15% { opacity: 1; transform: translateY(0) scale(1.05); }
+    75% { opacity: 1; transform: translateY(-18px) scale(1); }
+    100% { opacity: 0; transform: translateY(-28px) scale(1); }
+  }
+  --animate-xpFloat: xpFloat 1.6s cubic-bezier(0.16,1,0.3,1) both;
+}
+
+:root {
+  color-scheme: dark;
+}
+
+html, body, #root {
+  height: 100%;
+  background: #08090b;
+}
+
+body {
+  font-family: 'Zen Kaku Gothic New', 'Inter', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  overscroll-behavior: none;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(255,255,255,0.12);
+  border-radius: 999px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.no-scrollbar::-webkit-scrollbar { display: none; }
+.no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+
+.font-serif-jp {
+  font-family: 'Shippori Mincho', serif;
+}
+
+/* subtle grain / texture accent for premium feel */
+.texture-noise {
+  background-image: radial-gradient(rgba(255,255,255,0.035) 1px, transparent 1px);
+  background-size: 3px 3px;
+}
